@@ -7,7 +7,7 @@ import { TaskListComponent } from './component/dashboard/task-list/task-list.com
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'login',
+    redirectTo: 'dashboard',
     pathMatch: 'full'
   },
   {

@@ -13,19 +13,15 @@ export class MenuComponent implements OnInit {
       path: ''
     },
     {
-      label: 'Task List',
+      label: 'Story',
+      path: ''
+    },
+    {
+      label: 'Task',
       path: 'task-list'
     },
     {
-      label: 'Add Story',
-      path: ''
-    },
-    {
-      label: 'Add Task',
-      path: ''
-    },
-    {
-      label: 'Add Bugs',
+      label: 'Bugs',
       path: ''
     }
   ]
