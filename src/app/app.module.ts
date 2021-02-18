@@ -14,6 +14,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button'
 import { MatInputModule } from '@angular/material/input'
 import { MatFormFieldModule } from '@angular/material/form-field'
+import { StoryComponent } from './component/dashboard/story/story.component';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -23,15 +25,17 @@ import { MatFormFieldModule } from '@angular/material/form-field'
     HeaderComponent,
     MenuComponent,
     TaskListComponent,
-    BugListComponent
+    BugListComponent,
+    StoryComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatButtonModule,
     MatInputModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatButtonModule,
+    FormsModule,
   ],
   providers: [{ provide: APP_BASE_HREF, useValue: '/scrum/' },],
   bootstrap: [AppComponent]
