@@ -9,6 +9,11 @@ import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { HeaderComponent } from './component/dashboard/header/header.component';
 import { MenuComponent } from './component/dashboard/menu/menu.component';
 import { TaskListComponent } from './component/dashboard/task-list/task-list.component';
+import { BugListComponent } from './component/dashboard/bug-list/bug-list.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule } from '@angular/material/button'
+import { MatInputModule } from '@angular/material/input'
+import { MatFormFieldModule } from '@angular/material/form-field'
 
 @NgModule({
   declarations: [
@@ -17,11 +22,16 @@ import { TaskListComponent } from './component/dashboard/task-list/task-list.com
     DashboardComponent,
     HeaderComponent,
     MenuComponent,
-    TaskListComponent
+    TaskListComponent,
+    BugListComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatInputModule,
+    MatFormFieldModule
   ],
   providers: [{ provide: APP_BASE_HREF, useValue: '/scrum/' },],
   bootstrap: [AppComponent]

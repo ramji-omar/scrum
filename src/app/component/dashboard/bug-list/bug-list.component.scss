@@ -1,0 +1,46 @@
+.main_cont {
+    width: 800px;
+    min-width: 200px;
+    max-width: 800px;
+    margin: auto;
+    margin-top: 20px;
+    background-color: #f3f3f3;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.bug_list_cont {
+    margin: 10px 5px;
+    padding: 5px 10px;
+    border: 1px solid darkslateblue;
+    border-radius: 5px;
+}
+
+.bug_list_cont li {
+    padding: 5px;
+    margin: 5px;
+}
+
+.bug_list_cont li:hover {
+    background-color: darkgrey;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.bug_name {
+    font-size: large;
+    margin-right: 20px;
+    color: red;
+}
+
+.bug_desc {
+    font-size: 13px;
+}
+
+form {
+    width: 300px;
+}
+
+mat-form-field {
+    width: 100%;
+}

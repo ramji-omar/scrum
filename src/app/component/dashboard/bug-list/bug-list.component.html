@@ -1,0 +1,33 @@
+<div class="main_cont">
+    <section class="bug_list_cont">
+        <h2>Bug-List</h2>
+        <h4 *ngIf="bug_data.length === 0" style="color: red;">No data found</h4>
+        <ol>
+            <li *ngFor="let bug of bug_data;">
+                <span class="bug_name">{{ bug.name }}</span>
+                <small class="bug_desc">{{ bug.desc }}</small>
+            </li>
+        </ol>
+    </section>
+
+    <section *ngIf="!hideForm else elseblock" class="bug_list_cont">
+        <h2>Add Bug</h2>
+        <form>
+            <mat-form-field>
+              <mat-label>Bug Name</mat-label>
+              <input matInput #bName>
+            </mat-form-field>
+          
+            <mat-form-field>
+              <mat-label>Description</mat-label>
+              <textarea matInput #bDesc></textarea>
+            </mat-form-field>
+            <button type="submit" mat-raised-button color="accent" (click)="addBug($event, bName.value, bDesc.value)">Add to the list</button>
+        </form>
+    </section>
+
+    <ng-template #elseblock>
+        <button type="button" mat-raised-button color="primary" (click)="displayForm()">Add Bug</button>
+    </ng-template>
+        
+</div>
