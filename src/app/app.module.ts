@@ -9,13 +9,13 @@ import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { HeaderComponent } from './component/dashboard/header/header.component';
 import { MenuComponent } from './component/dashboard/menu/menu.component';
 import { TaskListComponent } from './component/dashboard/task-list/task-list.component';
-import { StoryComponent } from './component/dashboard/story/story.component';
-
-import { MatInputModule } from '@angular/material/input';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import {FormsModule} from '@angular/forms';
-import {MatButtonModule} from '@angular/material/button';
+import { BugListComponent } from './component/dashboard/bug-list/bug-list.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule } from '@angular/material/button'
+import { MatInputModule } from '@angular/material/input'
+import { MatFormFieldModule } from '@angular/material/form-field'
+import { StoryComponent } from './component/dashboard/story/story.component';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -25,15 +25,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HeaderComponent,
     MenuComponent,
     TaskListComponent,
+    BugListComponent,
     StoryComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
     MatInputModule,
     MatFormFieldModule,
     MatButtonModule,
-    BrowserAnimationsModule,
     FormsModule,
   ],
   providers: [{ provide: APP_BASE_HREF, useValue: '/scrum/' },],

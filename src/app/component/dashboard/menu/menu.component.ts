@@ -22,7 +22,7 @@ export class MenuComponent implements OnInit {
     },
     {
       label: 'Bugs',
-      path: ''
+      path: 'bug-list'
     }
   ]
 
