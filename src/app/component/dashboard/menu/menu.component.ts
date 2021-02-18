@@ -14,7 +14,7 @@ export class MenuComponent implements OnInit {
     },
     {
       label: 'Story',
-      path: ''
+      path: 'story'
     },
     {
       label: 'Task',
