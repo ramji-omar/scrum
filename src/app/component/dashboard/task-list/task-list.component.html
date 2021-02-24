@@ -1,14 +1,11 @@
-<div>
-    <button>Add Task</button>
-
-<div>
-    <h2>Task List</h2>
-    <div>No List Found</div>
-</div>
-
-<div>
-    <h2>Actions</h2>
-    <button>Add Task</button>
-    <button>Add Bugs</button>
-</div>
+<div id="bottomData">
+    
+    <h1 style="font-family: 'Courier New', Courier, monospace;"> TASK LIST</h1>
+    <p *ngIf="taskData.length === 0"> Kyaaa</p>
+    <div *ngFor="let s of taskData;" class="dynamicData">
+        <p>
+            <span> Task Name : </span> {{s.task}} <br>
+            <span> Task Details : </span> {{s.details}}
+        </p>
+    </div>
 </div>

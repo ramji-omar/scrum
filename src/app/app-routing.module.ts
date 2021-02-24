@@ -1,9 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './component/auth/login/login.component';
-import { BugListComponent } from './component/dashboard/bug-list/bug-list.component';
 import { DashboardComponent } from './component/dashboard/dashboard.component';
-import { StoryComponent } from './component/dashboard/story/story.component';
+import { addTask } from './component/dashboard/addTask/addTask.component';
 import { TaskListComponent } from './component/dashboard/task-list/task-list.component';
 
 const routes: Routes = [
@@ -25,12 +24,8 @@ const routes: Routes = [
         component: TaskListComponent
       },
       {
-        path: 'bug-list',
-        component: BugListComponent
-      },
-      {
-        path: 'story',
-        component: StoryComponent
+        path: 'addTask',
+        component: addTask
       }
     ]
   }
