@@ -9,13 +9,21 @@ import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { HeaderComponent } from './component/dashboard/header/header.component';
 import { MenuComponent } from './component/dashboard/menu/menu.component';
 import { TaskListComponent } from './component/dashboard/task-list/task-list.component';
-import { BugListComponent } from './component/dashboard/bug-list/bug-list.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule } from '@angular/material/button'
-import { MatInputModule } from '@angular/material/input'
-import { MatFormFieldModule } from '@angular/material/form-field'
-import { StoryComponent } from './component/dashboard/story/story.component';
+import { addTask } from './component/dashboard/addTask/addTask.component';
+
+
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import {FormsModule} from '@angular/forms';
+import {MatButtonModule} from '@angular/material/button';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatDatepickerModule} from '@angular/material/datepicker'
+import { MatNativeDateModule } from '@angular/material/core';
+import {MatTableModule} from '@angular/material/table';
+import {MatTableDataSource} from '@angular/material/table';
+import {MatSortModule} from '@angular/material/sort';
+import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
+
 
 @NgModule({
   declarations: [
@@ -25,17 +33,22 @@ import {FormsModule} from '@angular/forms';
     HeaderComponent,
     MenuComponent,
     TaskListComponent,
-    BugListComponent,
-    StoryComponent
+    addTask
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule,
     MatInputModule,
     MatFormFieldModule,
     MatButtonModule,
+    BrowserAnimationsModule,
     FormsModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatTableModule,
+    MatSortModule,
+    MatPaginatorModule,
+    
   ],
   providers: [{ provide: APP_BASE_HREF, useValue: '/scrum/' },],
   bootstrap: [AppComponent]

@@ -7,9 +7,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TaskListComponent implements OnInit {
 
-  constructor() { }
+  displayTask = false;
+  public formData = {
+    task: '',
+    details: ''
+  }
 
+  taskData = []
+
+  constructor() { }
+  
   ngOnInit(): void {
+  }
+  
+  addTask(){
+    this.displayTask = true;
+  }
+
+  saveData(value:any) {
+    // console.log(value);
+    this.taskData.push(this.formData);
+    this.formData = {
+      task: '',
+      details: ''
+    }
+    console.log(this.taskData);
   }
 
 }

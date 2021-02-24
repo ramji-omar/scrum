@@ -1,0 +1,111 @@
+<div class="mainData">
+    <button (click)="addTask()" class="addButton" mat-raised-button color="primary">ADD TASK</button>
+    <div class="next">
+        <div *ngIf="displayTask" id="topData">
+            <form class="example-form" id="taskForm" #userForm="ngForm" (ngSubmit)="saveData(userForm.value)">
+
+
+                <mat-form-field class="example-full-width">
+                    <p style="font-weight: bold;">TASK NAME *</p>
+
+                    <input matInput placeholder="" name="name" [(ngModel)]="formData.task" required>
+                </mat-form-field>
+
+                <mat-form-field class="example-full-width">
+                    <p style="font-weight: bold;">ENTER DETAILS OF TASk</p>
+
+
+                    <textarea matInput placeholder="" name="details" [(ngModel)]="formData.details"></textarea>
+                </mat-form-field>
+
+                <div class="float-container">
+                    <div class="float-child">
+                        <mat-form-field appearance="fill" class="">
+                            <mat-label>Choose a start date</mat-label>
+                            <input matInput [matDatepicker]="spicker" name="startDate" [(ngModel)]="formData.startDate">
+                            <mat-datepicker-toggle matSuffix [for]="spicker"></mat-datepicker-toggle>
+                            <mat-datepicker #spicker></mat-datepicker>
+                        </mat-form-field>
+                    </div>
+
+
+
+                    <div class="float-child">
+
+
+                        <mat-form-field appearance="fill">
+                            <mat-label>Choose a end date</mat-label>
+                            <input matInput [matDatepicker]="mypicker" name="endDate" [(ngModel)]="formData.endDate">
+                            <mat-datepicker-toggle matSuffix [for]="mypicker"></mat-datepicker-toggle>
+                            <mat-datepicker #mypicker></mat-datepicker>
+                        </mat-form-field>
+                    </div>
+
+                </div>
+
+                <mat-form-field appearance="fill">
+                    <mat-label>Priority</mat-label>
+                    <select matNativeControl name="priority" [(ngModel)]="formData.priority">
+                        <option value="High">High</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Low">Low</option>
+
+                    </select>
+                </mat-form-field>
+
+                <br>
+
+                <button [disabled]="formData.error" type="submit" class="saveButton" mat-raised-button
+                    color="warn">SAVE</button>
+            </form>
+        </div>
+    </div>
+
+
+
+    <div id="bottomData">
+        <h1 style="font-family: 'Courier New', Courier, monospace;"> TASK LIST</h1>
+    </div>
+    <div>
+
+        <form class="example" action="/action_page.php" style="margin: auto;max-width: 600px;">
+            <input type="text" placeholder="Search.." name="search" (keyup)="applyFilter($event.target.value)">
+            <button type="submit">
+                <p style="font-family: 'Courier New', Courier, monospace;">SEARCH</p>
+            </button>
+        </form>
+    </div>
+
+
+    <br><br>
+    <p *ngIf="taskData.length === 0" class="empty"> Empty</p>
+
+
+    <div *ngFor="let s of taskData;" class="abcd">
+
+        <div>
+
+            <p>
+                <span style="color: brown;"> Priority : </span> {{s.priority}} <br>
+                <span> Task Name : </span> {{s.task}} <br>
+                <span> Task Details : </span> {{s.details}} <br>
+                <span> Start Date : </span> {{s.startDate}} <br>
+                <span> End Date : </span> {{s.endDate}} <br>
+
+            </p>
+
+
+            <button class="buu" (click)="editTask(s)">EDIT TASK</button>
+            <button class="buu" (click)="deleteTask(s)">DELETE</button>
+
+
+
+
+        </div>
+
+
+
+    </div>
+
+    <mat-paginator [pageSizeOptions] = "[5 , 10 , 20 ]" showFirstLastButtons></mat-paginator>
+</div>

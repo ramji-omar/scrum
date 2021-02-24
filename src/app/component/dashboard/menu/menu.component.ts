@@ -9,20 +9,24 @@ import { Router } from '@angular/router';
 export class MenuComponent implements OnInit {
   menuOptions = [
     {
-      label: 'Scrum Board',
+      label: 'SCRUM BOARD',
       path: ''
     },
     {
-      label: 'Story',
-      path: 'story'
+      label: 'TASK LIST',
+      path: ''
     },
     {
-      label: 'Task',
-      path: 'task-list'
+      label: 'ADD STORY',
+      path: ''
     },
     {
-      label: 'Bugs',
-      path: 'bug-list'
+      label: 'ADD TASK',
+      path: 'addTask'
+    },
+    {
+      label: 'ADD BUGS',
+      path: ''
     }
   ]
 
