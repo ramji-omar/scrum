@@ -1,0 +1,172 @@
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+}
+
+.example-full-width {
+  width: 100%;
+}
+.mainData {
+  width: 100%;
+}
+#topData {
+  margin: 10px;
+  padding: 15px;
+
+  border-style: solid;
+}
+
+#bottomData {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+ }
+.dynamicData {
+  
+  
+  width: 60%;
+  
+ 
+  
+  
+}
+.abcd{
+  width: 50%;
+  margin: auto;
+  padding: 10px;
+  border: 3px solid rgb(0, 0, 0);
+}
+.empty{
+  padding-left: 10px;
+}
+
+form {
+  margin: auto;
+}
+
+h1 {
+  padding: 30px 0 0 0;
+  font-weight: bolder;
+}
+span {
+  font-weight: bold;
+}
+
+
+.saveButton {
+  margin: 10px 0 0 42%;
+  // width: 25%;
+  letter-spacing: 2px;
+  font-weight: bold;
+  background-color: rgb(145, 70, 85);
+  cursor: pointer;
+}
+
+.addButton {
+  background-color: #2d1cc9;
+  
+  margin-left: 10px;
+  margin-top: 30px;
+  border: none;
+  color: #eeeeee;
+  cursor: pointer;
+  display: inline-block;
+  font-family: sans-serif;
+  font-size: 20px;
+  
+  text-align: center;
+  text-decoration: none;
+}
+@keyframes glowing {
+  0% {
+    background-color: #7ec91c;
+    box-shadow: 0 0 5px #7ec91c;
+  }
+  50% {
+    background-color: #7ec91d;
+    box-shadow: 0 0 20px #7ec91d;
+  }
+  100% {
+    background-color: #7ec91e;
+    box-shadow: 0 0 5px #7ec91e;
+  }
+}
+.saveButton {
+  animation: glowing 1300ms infinite;
+}
+
+
+.float-container{
+  padding: 0px;
+}
+.float-child{
+  width: 50%;
+  float: left;
+  padding: 0px;
+  border: 2px solid balck;
+}
+
+.priority{
+  margin: auto;
+  display: center;
+}
+
+.buu{
+  
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 10px;
+  margin-top: 40px;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+  background: #6441a5;
+  opacity: 80%;
+  color: white;
+}
+
+
+// css for search Field
+* {
+  box-sizing: border-box;
+}
+
+form.example input[type=text] {
+  margin-left: 10px;
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 60%;
+  background: #ffffff;
+}
+
+form.example button {
+  float: left;
+  width: 20%;
+  padding: 4px;
+  background: #6441a5;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+}
+
+form.example button:hover {
+  background: #6441a5; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #2a0845, #6441a5); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #2a0845,
+    #6441a5
+  ); 
+}
+
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
